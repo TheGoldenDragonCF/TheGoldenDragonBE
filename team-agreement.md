@@ -1,5 +1,7 @@
 # Team Agreement
 
+Slideshow: https://docs.google.com/presentation/d/1VbDpF088V4KbTGG8l7dwn94vY813yFUCFiRVrfictvI/edit?usp=sharing
+
 ## Cooperation Plan
 ## Strengths?
 - Jeffrey Smith: My strength is knowledge, organization, creative the flow of things.
