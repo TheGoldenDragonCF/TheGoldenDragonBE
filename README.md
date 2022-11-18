@@ -2,8 +2,8 @@
 
 ## Wireframe
 
-![wireframe](./wireframe.png)
+![wireframe](image/wireframe.png)
 
 ## UML
 
-![UML](./uml.png)
+![UML](image/uml.png)
