@@ -1,9 +1,9 @@
 'use strict';
 
 const { Sequelize, DataTypes } = require('sequelize');
-const reservationModel = require('./reservations/model.js');
 const Collection = require('./data-collection.js');
 const userModel = require('./users.js');
+const cartModel = require('./cart.js');
 
 const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
 
@@ -17,13 +17,12 @@ let herokuOptions = {
 };
 
 const sequelize = new Sequelize(DATABASE_URL, herokuOptions);
-const reservations = reservationModel(sequelize, DataTypes);
-
-
+const users = userModel(sequelize, DataTypes);
+const carts = cartModel(sequelize, DataTypes);
 
 
 module.exports = {
   db: sequelize,
-  users: userModel(sequelize, DataTypes),
-  reservations: new Collection(reservations),
+  users: new Collection(users),
+  carts: new Collection(carts),
 };
