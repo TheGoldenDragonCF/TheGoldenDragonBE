@@ -10,11 +10,12 @@ const morgan = require('morgan');
 const { db } = require('./models')
 const errorHandler = require('./error-handlers/500.js');
 const notFound = require('./error-handlers/404.js');
-const authRoutes = require('./routes/auth.js');
 const logger = require('./middleware/auth/logger.js');
-
-const cartRoutes = require('./routes/cart.js');
 const bearer = require('./middleware/auth/bearer.js');
+
+const authRoutes = require('./routes/auth.js');
+const cartRoutes = require('./routes/cart.js');
+const menuRoutes = require('./routes/menu.js');
 
 // Prepare the express app
 const app = express();
@@ -40,6 +41,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use(authRoutes);
 app.use(cartRoutes);
+app.use(menuRoutes);
 // Catchalls
 app.use(notFound);
 app.use(errorHandler);
