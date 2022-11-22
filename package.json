@@ -4,14 +4,15 @@
   "description": "## Wireframe",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheGoldenDragonCF/TheGoldenDragonBE.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jacko and Jeffo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TheGoldenDragonCF/TheGoldenDragonBE/issues"
@@ -27,8 +28,13 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "path": "^0.12.7",
     "sequelize": "^6.25.6",
     "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11"
   }
 }
