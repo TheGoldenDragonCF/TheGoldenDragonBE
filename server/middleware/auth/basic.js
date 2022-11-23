@@ -11,14 +11,15 @@ module.exports = async (req, res, next) => {
   let [user, pass] = base64.decode(basic).split(':');
 
   try {
-    req.user = await users.authenticateBasic(user, pass)
+    req.user = await users.model.authenticateBasic(user, pass)
     next();
-  } catch (e) {
+  } catch (error) {
+    console.log(error);
     _authError()
   }
 
   function _authError() {
-    res.status(403).send('Invalid Login');
+    res.status(403).send('Failed to Login');
   }
 
 }
